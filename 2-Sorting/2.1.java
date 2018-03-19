@@ -21,4 +21,11 @@ public class Example {
     }
     return true;
   }
+
+  public static void main(String[] args) {
+    String[] a = StdIn.readAllStrings();
+    sort(a);
+    assert isSorted(a);
+    show(a);
+  }
 }
