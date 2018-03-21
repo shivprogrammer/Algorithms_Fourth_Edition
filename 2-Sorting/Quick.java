@@ -37,8 +37,18 @@ public class Quick {
       // find item on hi to swap
       while (less(v, a[--j])) {
         if (j == lo) break;
-        
       }
+
+      // check if pointers cross
+      if (i >= j) break;
+
+      exch(a, i, j);
     }
+
+    // put partitioning item v at a[j]
+    exch(a, lo, j);
+
+    //now, a[lo .. j-1] <= a[j] <= a[j+1 .. hi]
+    return j;
   }
 }
