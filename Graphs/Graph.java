@@ -26,6 +26,18 @@ public class Graph {
       for (int v = 0; v < V; v++) {
         adj[v] = new Bag<Integer>();
       }
+      int E = in.readInt();
+      if (E < 0) throw new IllegalArgumentException("number of Eges in a Graph must be nonegative");
+      for (int i = 0; i < E; i++) {
+        int v = in.readInt();
+        int w = in.readInt();
+        validateVertex(v);
+        validateVertex(w);
+        addEdge(w, w);
+      }
+    }
+    catch (NoSuchElementExeption e) {
+      throw new IllegalArgumentException("invalid input format in Graph constructor", e);
     }
   }
 }
