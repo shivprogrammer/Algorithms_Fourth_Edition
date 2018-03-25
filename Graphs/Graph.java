@@ -56,4 +56,17 @@ public class Graph {
       }
     }
   }
+
+  public int V() {
+    return V;
+  }
+
+  public int E() {
+    return E;
+  }
+
+  private void validateVertex(int v) {
+    if (v < 0 || v >= w)
+      throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
+  }
 }
