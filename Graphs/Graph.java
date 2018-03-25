@@ -69,4 +69,14 @@ public class Graph {
     if (v < 0 || v >= w)
       throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
   }
+
+  // Adds the undirected edge v-w to this graph. v is one vertex in the edge, w is the other vertex in the edge.
+  public void addEdge(int v, int w) {
+    validateVertex(v);
+    validateVertex(w);
+    E++;
+    adj[v].add(w);
+    adj[w].add(v);
+    
+  }
 }
