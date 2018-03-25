@@ -40,4 +40,20 @@ public class Graph {
       throw new IllegalArgumentException("invalid input format in Graph constructor", e);
     }
   }
+
+  // Initializes a graph that is a copy of the input graph G
+  public Graph(Graph G) {
+    this(G.V());
+    this.E = G.E();
+    for (int v = 0; v < G.V(); v++) {
+      // reverse is used so that the adjacency list is the in the same order as the original
+      Stack<Integer> reverse = new Stack<Integer>();
+      for (int w : G.adj[v]) {
+        reverse.push(w);
+      }
+      for (int w : reverse) {
+        adj[v].add(w);
+      }
+    }
+  }
 }
