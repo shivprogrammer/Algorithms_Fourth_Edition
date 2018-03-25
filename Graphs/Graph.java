@@ -85,9 +85,21 @@ public class Graph {
     return adj[v];
   }
 
-  // returns the deree of vertex, v is the vertex
+  // Returns the deree of vertex, v is the vertex
   public int degree(int v) {
     validateVertex(v);
     return adj[v].size();
+  }
+
+  // Return a string representation of the graph.
+  public String toString() {
+    StringBuilder s = new StringBuilder();
+    s.append(V + " vertices, " + E + " edges " + NEWLINE);
+    for (int v = 0; v < V; v++) {
+      s.append(v + ": ");
+      for (int w : adj[v]) {
+        
+      }
+    }
   }
 }
