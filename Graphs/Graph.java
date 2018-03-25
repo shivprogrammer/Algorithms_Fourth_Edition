@@ -77,6 +77,15 @@ public class Graph {
     E++;
     adj[v].add(w);
     adj[w].add(v);
-    
+  }
+
+  // Returns the vertices adjacent to vertex as an iterable, v is the vertex
+  public Iterable<Integer> adj(int v) {
+    validateVertex(v);
+    return adj[v];
+  }
+
+  public int degree(int v) {
+    v
   }
 }
