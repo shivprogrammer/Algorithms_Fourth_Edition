@@ -85,7 +85,9 @@ public class Graph {
     return adj[v];
   }
 
+  // returns the deree of vertex, v is the vertex
   public int degree(int v) {
-    v
+    validateVertex(v);
+    return adj[v].size();
   }
 }
