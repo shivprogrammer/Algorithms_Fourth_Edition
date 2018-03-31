@@ -41,4 +41,9 @@ public class DepthFirstPaths {
     path.push(s);
     return path;
   }
+
+  private void validateVertex(int v) {
+    int V = marked.length;
+    
+  }
 }
