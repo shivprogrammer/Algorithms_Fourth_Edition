@@ -30,4 +30,11 @@ public class DepthFirstPaths {
     validateVertex(v);
     return marked[v];
   }
+
+  // returns a path between the source vertex s and vertex v
+  public Iterable<Integer> pathTo(int v) {
+    validateVertex(v);
+    if (!hasPathTo(v)) return null;
+    Stack<Integer> path
+  }
 }
