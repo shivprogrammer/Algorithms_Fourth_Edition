@@ -14,5 +14,20 @@ public class DepthFirstPaths {
     dfs(G, s);
   }
 
-  //
+  // depth first search from v
+  private void dfs(Graph G, int v) {
+    marked[v] = true;
+    for (int w : G.adj(v)) {
+      if (!marked[w]) {
+        edgeTo[w] = v;
+        dfs(G, w);
+      }
+    }
+  }
+
+  // Is there a path between the source vertex s and vertex v?
+  public boolean hasPathTo(int v) {
+    validateVertex(v);
+    return marked[v];
+  }
 }
